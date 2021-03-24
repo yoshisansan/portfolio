@@ -39,6 +39,11 @@ class BlogIndex extends React.Component {
               <p
                 dangerouslySetInnerHTML={{ __html: node.metadata.homedescription }}
               />
+              <p>
+                <Link style={{ boxShadow: 'none' }} to={`posts/${node.slug}`}>
+                  もっと読む
+                </Link>
+              </p>
             </div>
           )
         })}
