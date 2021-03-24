@@ -37,7 +37,7 @@ class BlogIndex extends React.Component {
               </h3>
               <small>{node.created}</small>
               <p
-                dangerouslySetInnerHTML={{ __html: node.metadata.description }}
+                dangerouslySetInnerHTML={{ __html: node.metadata.homedescription }}
               />
             </div>
           )
@@ -55,11 +55,11 @@ export const pageQuery = graphql`
       edges {
         node {
           metadata {
-            description
+            homedescription
           }
           slug
           title
-          created(formatString: "DD MMMM, YYYY")
+          created(formatString: "YYYY MMMM DD")
         }
       }
     }
