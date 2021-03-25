@@ -64,7 +64,7 @@ export const pageQuery = graphql`
           }
           slug
           title
-          created(formatString: "YYYY MMMM DD")
+          created(formatString: "YYYY MM DD")
         }
       }
     }
